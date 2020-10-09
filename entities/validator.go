@@ -18,7 +18,7 @@ type Validator struct {
 	Tokens          string `json:"tokens"`
 	DelegatorShares string `json:"delegator_shares"`
 
-	UnbondingHeight int64  `json:"unbonding_height" sql:"default:0"`
+	UnbondingHeight string `json:"unbonding_height" sql:"default:0"`
 	UnbondingTime   string `json:"unbonding_time"`
 
 	Rate          string `json:"rate"`
