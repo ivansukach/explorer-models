@@ -1,4 +1,4 @@
-package types
+package objects
 
 // Signature defines the structure for transaction signature
 type Signature struct {

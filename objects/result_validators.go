@@ -1,4 +1,4 @@
-package types
+package objects
 
 type ResultValidator struct {
 	Height string       `json:"height"`
