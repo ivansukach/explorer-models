@@ -14,7 +14,7 @@ type Validator struct {
 	Details         string `json:"details"`          // optional details
 
 	Jailed          bool   `json:"jailed"`
-	Status          string `json:"status"`
+	Status          int64  `json:"status"`
 	Tokens          string `json:"tokens"`
 	DelegatorShares string `json:"delegator_shares"`
 
