@@ -7,7 +7,6 @@ type (
 	Validator struct {
 		ID                int64       `json:"id" sql:",pk"`
 		OperatorAddress   string      `json:"operator_address" sql:",notnull"`
-		ConsensusAddress  string      `json:"consensus_address" sql:",notnull"`
 		ConsensusPubKey   string      `json:"consensus_pubkey" sql:",notnull"`
 		Jailed            bool        `json:"jailed"`
 		Status            int64       `json:"status"`

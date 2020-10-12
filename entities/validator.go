@@ -3,9 +3,10 @@ package entities
 import "time"
 
 type Validator struct {
-	ID              int64  `json:"id" sql:",pk"`
-	OperatorAddress string `json:"operator_address" sql:",notnull, unique"`
-	ConsensusPubKey string `json:"consensus_pubkey" sql:",notnull, unique"`
+	ID               int64  `json:"id" sql:",pk"`
+	OperatorAddress  string `json:"operator_address" sql:",notnull, unique"`
+	ConsensusAddress string `json:"consensus_address" sql:",notnull"`
+	ConsensusPubKey  string `json:"consensus_pubkey" sql:",notnull, unique"`
 
 	Moniker         string `json:"moniker" `
 	Identity        string `json:"identity"`         // optional identity signature (ex. UPort or Keybase)
