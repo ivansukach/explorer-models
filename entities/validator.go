@@ -14,10 +14,10 @@ type Validator struct {
 	SecurityContact string `json:"security_contact"` // optional security contact info
 	Details         string `json:"details"`          // optional details
 
-	Jailed          bool   `json:"jailed"`
-	Status          int64  `json:"status"`
-	Tokens          string `json:"tokens"`
-	DelegatorShares string `json:"delegator_shares"`
+	Jailed          bool    `json:"jailed"`
+	Status          int64   `json:"status"`
+	Tokens          float64 `json:"tokens"`
+	DelegatorShares string  `json:"delegator_shares"`
 
 	UnbondingHeight string `json:"unbonding_height" sql:"default:0"`
 	UnbondingTime   string `json:"unbonding_time"`
