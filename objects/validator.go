@@ -10,7 +10,7 @@ type (
 		ConsensusPubKey   string      `json:"consensus_pubkey" sql:",notnull"`
 		Jailed            bool        `json:"jailed"`
 		Status            int64       `json:"status"`
-		Tokens            float64     `json:"tokens"`
+		Tokens            string      `json:"tokens"`
 		DelegatorShares   string      `json:"delegator_shares"`
 		Description       Description `json:"description"`
 		UnbondingHeight   string      `json:"unbonding_height" sql:"default:0"`
