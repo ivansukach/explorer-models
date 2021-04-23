@@ -15,17 +15,17 @@ type Validator struct {
 	Details         string `json:"details"`          // optional details
 
 	Jailed          bool    `json:"jailed"`
-	Status          int64   `json:"status"`
+	Status          string  `json:"status"`
 	Tokens          float64 `json:"tokens"`
 	DelegatorShares string  `json:"delegator_shares"`
 
-	UnbondingHeight string `json:"unbonding_height" sql:"default:0"`
-	UnbondingTime   string `json:"unbonding_time"`
+	UnbondingHeight int64 `json:"unbonding_height" sql:"default:0"`
+	UnbondingTime   int64 `json:"unbonding_time"`
 
 	Rate          string `json:"rate"`
 	MaxRate       string `json:"max_rate"`
 	MaxChangeRate string `json:"max_change_rate"`
-	UpdateTime    string `json:"update_time"`
+	UpdateTime    int64  `json:"update_time"`
 
 	Timestamp         time.Time `json:"timestamp" sql:"default:now()"`
 	MinSelfDelegation string    `json:"min_self_delegation"` // validator's self declared minimum self delegation
