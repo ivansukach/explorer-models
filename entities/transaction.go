@@ -8,6 +8,8 @@ type Transaction struct {
 	Height     int64     `json:"height" sql:",notnull"`
 	TxHash     string    `json:"tx_hash" sql:",notnull,unique"`
 	Code       uint32    `json:"code"  sql:",notnull"` // https://docs.binance.org/exchange-integration.html#important-ensuring-transaction-finality
+	Sender     string    `json:"sender"`
+	Receiver   string    `json:"receiver"`
 	Messages   string    `json:"messages" sql:"type:jsonb, notnull, default: '[]'::jsonb"`
 	Signatures string    `json:"signautures" sql:"type:jsonb, notnull, default: '[]'::jsonb"`
 	Memo       string    `json:"memo"`
