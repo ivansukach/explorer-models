@@ -11,7 +11,7 @@ type Transaction struct {
 	Sender     string    `json:"sender"`
 	Receiver   string    `json:"receiver"`
 	Messages   string    `json:"messages" sql:"type:jsonb, notnull, default: '[]'::jsonb"`
-	Signatures string    `json:"signautures" sql:"type:jsonb, notnull, default: '[]'::jsonb"`
+	Signatures string    `json:"signatures" sql:"type:jsonb, notnull, default: '[]'::jsonb"`
 	Memo       string    `json:"memo"`
 	GasWanted  int64     `json:"gas_wanted" sql:"default:0"`
 	GasUsed    int64     `json:"gas_used" sql:"default:0"`
