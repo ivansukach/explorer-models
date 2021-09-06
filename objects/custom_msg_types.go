@@ -4,6 +4,7 @@ import (
 	sdk "github.com/ivansukach/modified-cosmos-sdk/types"
 	"github.com/ivansukach/modified-cosmos-sdk/x/evidence/exported"
 	govTypes "github.com/ivansukach/modified-cosmos-sdk/x/gov/types"
+	stakingTypes "github.com/ivansukach/modified-cosmos-sdk/x/staking/types"
 )
 
 type CustomMsgSubmitEvidence struct {
@@ -18,11 +19,11 @@ type CustomMsgSubmitProposal struct {
 }
 
 type CustomMsgCreateValidator struct {
-	Description       Description     `json:"description"`
-	Commission        CommissionRates `json:"commission"`
-	MinSelfDelegation sdk.Int         `json:"min_self_delegation"`
-	DelegatorAddress  sdk.AccAddress  `json:"delegator_address"`
-	ValidatorAddress  sdk.ValAddress  `json:"validator_address"`
-	PubKey            string          `json:"pubkey"`
-	Value             sdk.Coin        `json:"value"`
+	Description       stakingTypes.Description     `json:"description"`
+	Commission        stakingTypes.CommissionRates `json:"commission"`
+	MinSelfDelegation sdk.Int                      `json:"min_self_delegation"`
+	DelegatorAddress  string                       `json:"delegator_address"`
+	ValidatorAddress  string                       `json:"validator_address"`
+	PubKey            string                       `json:"pubkey"`
+	Value             sdk.Coin                     `json:"value"`
 }
